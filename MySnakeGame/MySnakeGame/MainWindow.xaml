@@ -1,0 +1,41 @@
+﻿<Window x:Class="MySnakeGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MySnakeGame"
+        mc:Ignorable="d"
+        Icon="images\icon.ico"
+        Title="Snake Game" Height="515" Width="650">
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch" >
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Width="496">
+            <Canvas x:Name="Area" HorizontalAlignment="Left" VerticalAlignment="Top" Height="480" Width="488" Grid.Column="0" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" ></Canvas>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="75*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Score:" FontSize="16"/>
+            <Label x:Name="ScoreBox" Grid.Column="1" Content="0" FontSize="16"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="High Score:" FontSize="16"/>
+            <Label x:Name="HighScoreBox" Grid.Row="1" Grid.Column="1" Content="0" FontSize="16"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Size:" FontSize="16"/>
+            <Label x:Name="SizeBox" Grid.Row="2" Grid.Column="1" Content="0"  FontSize="16"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Velocity:" FontSize="16"/>
+            <Label x:Name="VelocityBox" Grid.Row="3" Grid.Column="1" Content="0" FontSize="16"/>
+        </Grid>
+
+    </Grid>
+</Window>
